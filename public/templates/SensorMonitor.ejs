@@ -1,0 +1,112 @@
+<html>
+<head>
+
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    
+   
+</head>
+<body>
+ <h3> <legend align ="center"> Sensor Monitor </h3>
+<div class="container">
+    <div class="row col-md-10 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Sensor Name</th>
+            <th>Location</th>
+            <th>Alarm</th>
+            <th>Connection Status</th>
+        </tr>
+    </thead>
+            <tr>
+                <td>Water Sensor 1</td>
+                <td>San Jose</td>
+                <td> <div class="btn-group btn-toggle"> 
+    <button class="btn btn-default">ON</button>
+    <button class="btn btn-primary active">OFF</button>
+  </div> </td>
+                <td><span class="label label-success">Active</span></td> 
+            </tr>
+            <tr>
+                <td>Water Sensor 2</td>
+                <td>San Carlos</td>
+                <td><div class="btn-group btn-toggle"> 
+    <button class="btn btn-default">ON</button>
+    <button class="btn btn-primary active">OFF</button>
+  </div> </td>
+                <td><span class="label label-success">Active</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 2</td>
+                <td>San Francisco</td>
+                <td> <div class="btn-group btn-toggle"> 
+    <button class="btn btn-default">ON</button>
+    <button class="btn btn-primary active">OFF</button>
+  </div></td>
+                <td><span class="label label-warning">Banned</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 2</td>
+                <td>San Francisco</td>
+                <td> <div class="btn-group btn-toggle"> 
+    <button class="btn btn-primary active">OFF</button>
+    <button class="btn btn-default">ON</button>
+  </div> </td>
+                <td><span class="label label-success">Active</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 3</td>
+                <td>San Francisco</td>
+                <td><div class="btn-group btn-toggle"> 
+    <button class="btn btn-default">ON</button>
+    <button class="btn btn-primary active">OFF</button>
+  </div> </td>
+                <td><span class="label label-warning">Banned</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 4</td>
+                <td>San Jose</td>
+                <td><div class="btn-group btn-toggle"> 
+    <button class="btn btn-primary active">OFF</button>
+    <button class="btn btn-default ">ON</button>
+  </div> </td>
+                <td><span class="label label-success">Active</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 5</td>
+                <td>San Carlos</td>
+                <td><div class="btn-group btn-toggle"> 
+    <button class="btn btn-default">ON</button>
+    <button class="btn btn-primary active">OFF</button>
+  </div></td>
+                <td><span class="label label-warning">Banned</span></td>
+            </tr>
+            <tr>
+               <td>Water Sensor 6</td>
+                <td>San Jose</td>
+                <td> <div class="btn-group btn-toggle"> 
+    <button class="btn btn-primary active">OFF</button>
+    <button class="btn btn-default">ON</button>
+  </div></td>
+                <td><span class="label label-warning">Banned</span></td>
+            </tr>
+    </table>
+    </div>
+</div>
+ <google-map markers="markers" style="width: 100%"><div></div></google-map>
+
+<div>
+    <div ng-controller="SensorMonitorController">
+        <input ng-model="highchartsNG.title.text">
+        <button ng-click="addSeries()">Add Series</button>
+        <button ng-click="addPoints()">Add Points to Random Series</button>
+        <button ng-click="removeRandomSeries()">Remove Random Series</button>
+        <button ng-click="swapChartType()">Line/Bar</button>
+        <highchart id="chart1" config="highchartsNG"></highchart>
+    </div>
+</div>
+
+</body>
+</html>

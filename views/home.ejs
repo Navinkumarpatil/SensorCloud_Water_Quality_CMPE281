@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>    	
+		<title> Sensor Cloud Water Quality  </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<link rel="stylesheet" href="/assets/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+    	<link rel='stylesheet' href='/stylesheets/style.css' />
+    	<link href="assests/css/the-big-picture.css" rel="stylesheet">
+    	
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+     <script src="http://code.highcharts.com/highcharts.src.js"></script>
+    <script src="https://rawgithub.com/pablojim/highcharts-ng/master/src/highcharts-ng.js"></script>
+     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDyWnQ2fs6G8IQm8EZS1uRUh94Vuovdm5g&language=en"></script>
+    
+   
+  <script src= "/js/home.js"></script>
+	</head>
+    <body >
+    <img alt="full screen background image" src="images/water-quality6.jpg" id="full-screen-background-image" /> 
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="assets/js/main.js"></script>
+	
+	
+    <!--Start Header -->
+   
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+ 		<div class="container-fluid">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">Sensor Cloud</a>
+      	</a>
+      
+    	
+  	 </div>
+  	<div class="navbar-collapse collapse"> 
+  	 <ul class="nav navbar-nav navbar-right">
+      	<li><a href="#about">Signout</a></li>
+    </div>
+ </div>
+	</nav>	
+	
+	<!-- Close Header -->
+	<br><br><br><br>
+	<div container>	
+	<div class="well" >
+	 <div class="row">
+        <div class="col-md-12">
+    <div  ng-app="app" ng-controller="TabsCtrl">
+     <ul class="nav nav-pills" ng-init="activeTab = 'home'">
+      <li>{{tab.link}}</li>
+      <li ng-class="tabClass(tab)" ng-repeat="tab in tabs" tab="tab"><a href="{{tab.link}}" class="{{tab.className}}">{{tab.label}} <i class="glyphicon glyphicon-remove" ng-click="removeTab($index)" ng-show="showIcon($index)"></i> </a></li>
+    </ul>
+    <div ng-view></div>
+    </div>
+ 	
+ 	</div>
+    </div>
+    </div>
+    </div>
+    </body>
+    
+    
+    <!-- Footer -->
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+	<div class="navbar-collapse collapse">
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="#about">CMPE281@Team8</a></li>
+	</div>
+	</div>
+</nav>
+
+<!-- Close Footer -->
+ 
+</html>

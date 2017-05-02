@@ -1,0 +1,88 @@
+<!-- views/login.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="angularjs/login.js"></script>
+    
+    
+    <style>
+body {
+    background: images/water-quality4.jpg
+    background-size: 80px 60px;
+    background-repeat: no-repeat;
+    padding-top: 80px;
+    background: rgba(0,0,0,0.5);
+   
+}
+
+    </style>
+</head>
+<body ng-app="app" ng-controller="login" style="background-image: url(images/water-quality4.jpg); background-size: 100% auto">
+<div class="container">
+
+    <!-- Start Header -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Sensor Cloud</a> </a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#about">Signout</a></li>
+				</div>
+			</div>
+		</nav>
+		<!-- Close Header -->
+		
+		
+<div class="col-sm-6 col-sm-offset-3" id="login" style="margin-left: 25%;">
+	<br><br>
+    <h1 style="font-family: fantasy; margin-left: inherit;"> Water Quality</h1>
+      <h1 style="font-size: 25px;font-family: fantasy; margin-left: 220px;">Sign in</h1>
+    <!-- LOGIN FORM -->
+    <form action="" method="">
+    
+     <img class="pull-left" >
+     <div align="Center">
+        <div class="form-group,clearfix">
+            <labe l><b>Username</b></label>&nbsp;
+            <input type="text" class="form-control,clearfix" name="username" ng-model="username">
+        </div>
+        &nbsp;
+        <div class="form-group,clearfix">
+            <label><b>Password</b></label>&nbsp;
+            <input type="password" class="form-control,clearfix" name="password" ng-model="password">
+        </div>
+        
+        <hr>
+        <div>
+        <input id="persist_box" type="checkbox" name="persistent" value="1" checked="1" class="uiInputLabelInput uiInputLabelCheckbox"/>
+        <label for="persist_box" class="uiInputLabelLabel">Remember Me</label>
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Login</button> -->
+        <div class="alert alert-danger" ng-hide="invalid_login">
+			<strong>Incorrect username or password</strong>
+		</div>
+		<div class="alert alert-danger" ng-hide="unexpected_error">
+			<strong>Unexpected error, try again</strong>
+		</div>
+		<input type="submit" class="btn btn-success" ng-click="submit();" value="Login" />
+	 	<input type="submit" class="btn btn-success" ng-click="signup();" value="Signup" /> 
+     </div>
+        
+    </form>
+</div>
+
+</div>
+</body>
+</html>
